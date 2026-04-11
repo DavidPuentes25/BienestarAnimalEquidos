@@ -2,258 +2,410 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Evaluación Bienestar Animal</title>
+<title>Evaluación Bienestar Animal - Équidos</title>
+
 <style>
-body { font-family: Arial; margin: 20px; background:#f4f6f7; }
-.pregunta { background:white; padding:15px; margin-bottom:15px; border-radius:10px; }
-h1,h2 { color:#2c3e50; }
-button { padding:10px 20px; font-size:16px; }
+body{
+font-family: Arial;
+background:#f4f6f7;
+margin:30px;
+}
+
+h1{
+text-align:center;
+color:#2c3e50;
+}
+
+h2{
+background:#2c3e50;
+color:white;
+padding:10px;
+border-radius:8px;
+margin-top:30px;
+}
+
+.pregunta{
+background:white;
+padding:18px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+label{
+display:block;
+margin-top:6px;
+}
+
+button{
+padding:12px 18px;
+background:#2c3e50;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+#resultado{
+margin-top:25px;
+font-size:22px;
+font-weight:bold;
+}
 </style>
 </head>
+
 <body>
 
-<h1>Evaluación de Bienestar Animal</h1>
+<h1>Evaluación de Bienestar Animal en Équidos</h1>
+
 <form id="formulario">
 
-<h2>Sección 1</h2>
+<!-- ===================== SECCIÓN 1 ===================== -->
+<h2>SECCIÓN 1: Alimentación</h2>
 
-<!-- 1 -->
-<div class="pregunta"><p>¿Alimentos adecuados?</p>
-<label><input type="radio" name="p1" value="100"> 100 puntos</label>
-<label><input type="radio" name="p1" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>1. ¿Todos los alimentos suministrados a los équidos son adecuados, cuentan con registro ICA y buenas prácticas de alimentación?</p>
+<label><input type="radio" name="p1" value="100">100 - Los alimentos están en buenas condiciones de almacenamiento, con registro ICA para los alimentos comerciales, que sean balanceados y que estén en cantidad suficiente en comederos para los animales existentes.</label>
+<label><input type="radio" name="p1" value="0">0 - Los alimentos no están en buenas condiciones de almacenamiento o; Uno o más de los alimentos balanceados comerciales se encuentran sin registro ICA o; La cantidad está insuficiente para los animales existentes.
+</label>
+</div>
 
-<!-- 2 -->
-<div class="pregunta"><p>¿Acceso a agua y alimento?</p>
-<label><input type="radio" name="p2" value="100"> 100 puntos</label>
-<label><input type="radio" name="p2" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>2.¿Los animales disponen de acceso permanente a suficiente cantidad de agua y alimento? ¿Los comederos y bebederos se encuentran protegidos de la lluvia y el sol?</p>
+<label><input type="radio" name="p2" value="100">100 - Todos los animales cuentan con fácil acceso al agua, al alimento, los bebederos y comederos se encuentran protegidos de la lluvia y el sol.</label>
+<label><input type="radio" name="p2" value="0">0 - No tienen fácil acceso al agua, al alimento, los bebederos y comederos no se encuentran protegidos de la lluvia y el sol.
+</label>
+</div>
 
-<!-- 3 -->
-<div class="pregunta"><p>¿Comederos limpios?</p>
-<label><input type="radio" name="p3" value="100"> 100 puntos</label>
-<label><input type="radio" name="p3" value="55"> 55 puntos</label>
-<label><input type="radio" name="p3" value="20"> 20 puntos</label>
-<label><input type="radio" name="p3" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>3. ¿Cuál es el estado de los comederos?¿Los comederos están limpios, libres de heces, moho y en buenas condiciones?
+</p>
+<label><input type="radio" name="p3" value="100">100 - Todos los comederos están en buen estado de conservación y limpieza.</label>
+<label><input type="radio" name="p3" value="55">55 - Al menos el 80% de los comederos están en buen estado de conservación y/o están limpios.</label>
+<label><input type="radio" name="p3" value="20">20 - Entre el 60% y el 79% de los comederos están en buen estado de conservación y/o están limpios.</label>
+<label><input type="radio" name="p3" value="0">0 - Menos del 60% de los comederos no están en buen estado y/o no están limpios, o no hay comederos.</label>
+</div>
 
-<!-- 4 -->
-<div class="pregunta"><p>¿Bebederos limpios?</p>
-<label><input type="radio" name="p4" value="100"> 100 puntos</label>
-<label><input type="radio" name="p4" value="55"> 55 puntos</label>
-<label><input type="radio" name="p4" value="20"> 20 puntos</label>
-<label><input type="radio" name="p4" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>4. ¿Cuál es el estado de los bebederos?¿Los bebederos están limpios y libres de lama?</p>
+<label><input type="radio" name="p4" value="100">100 - Todos los bebederos están limpios y libres de lama.</label>
+<label><input type="radio" name="p4" value="55">55 - Al menos el 80% de los bebederos están limpios y libres de lama.</label>
+<label><input type="radio" name="p4" value="20">20 - Entre el 60% y el 79% de los bebederos están limpios y libres de lama.</label>
+<label><input type="radio" name="p4" value="0">0 - Menos del 60% de los bebederos no están limpios o no están libres de lama, o no hay bebederos.</label>
+</div>
 
-<!-- 5 -->
-<div class="pregunta"><p>¿Condición corporal?</p>
-<label><input type="radio" name="p5" value="100"> 100 puntos</label>
-<label><input type="radio" name="p5" value="55"> 55 puntos</label>
-<label><input type="radio" name="p5" value="20"> 20 puntos</label>
-<label><input type="radio" name="p5" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>5. ¿Cuál es la condición corporal de los animales?</p>
+<label><input type="radio" name="p5" value="100">100 - Mayor a 90% de los animales con puntuación de 3 en una escala 0 a 5.</label>
+<label><input type="radio" name="p5" value="55">55 - De 80% a 90% de los animales con puntuación entre 2 o 3 en una escala 0 a 5.</label>
+<label><input type="radio" name="p5" value="20">20 - De 71% a 79% de los animales con puntuación entre 2 o 3 en una escala 0 a 5.</label>
+<label><input type="radio" name="p5" value="0">0 - Menor o igual a 70% de los animales con puntuación entre 2 o 3 en una escala 0 a 5.</label>
+</div>
 
-<h2>Sección 2</h2>
+<!-- ===================== SECCIÓN 2 ===================== -->
+<h2>SECCIÓN 2: Instalaciones</h2>
 
-<!-- 6-19 simplificadas -->
-<div class="pregunta"><p>¿Cama adecuada?</p>
-<label><input type="radio" name="p6" value="100"> 100 puntos</label>
-<label><input type="radio" name="p6" value="55"> 55 puntos</label>
-<label><input type="radio" name="p6" value="20"> 20 puntos</label>
-<label><input type="radio" name="p6" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>6. Condición de la cama</p>
+<label><input type="radio" name="p6" value="100">100</label>
+<label><input type="radio" name="p6" value="55">55</label>
+<label><input type="radio" name="p6" value="20">20</label>
+<label><input type="radio" name="p6" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Pesebreras en buen estado?</p>
-<label><input type="radio" name="p7" value="100"> 100 puntos</label>
-<label><input type="radio" name="p7" value="55"> 55 puntos</label>
-<label><input type="radio" name="p7" value="20"> 20 puntos</label>
-<label><input type="radio" name="p7" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>7. Estado de pesebreras</p>
+<label><input type="radio" name="p7" value="100">100</label>
+<label><input type="radio" name="p7" value="55">55</label>
+<label><input type="radio" name="p7" value="20">20</label>
+<label><input type="radio" name="p7" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Ventilación adecuada?</p>
-<label><input type="radio" name="p8" value="100"> 100 puntos</label>
-<label><input type="radio" name="p8" value="55"> 55 puntos</label>
-<label><input type="radio" name="p8" value="20"> 20 puntos</label>
-<label><input type="radio" name="p8" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>8. Ventilación</p>
+<label><input type="radio" name="p8" value="100">100</label>
+<label><input type="radio" name="p8" value="55">55</label>
+<label><input type="radio" name="p8" value="20">20</label>
+<label><input type="radio" name="p8" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Iluminación adecuada?</p>
-<label><input type="radio" name="p9" value="100"> 100 puntos</label>
-<label><input type="radio" name="p9" value="55"> 55 puntos</label>
-<label><input type="radio" name="p9" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>9. Iluminación</p>
+<label><input type="radio" name="p9" value="100">100</label>
+<label><input type="radio" name="p9" value="55">55</label>
+<label><input type="radio" name="p9" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Humedad?</p>
-<label><input type="radio" name="p10" value="100"> 100 puntos</label>
-<label><input type="radio" name="p10" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>10. Humedad</p>
+<label><input type="radio" name="p10" value="100">100</label>
+<label><input type="radio" name="p10" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Pisos pesebreras?</p>
-<label><input type="radio" name="p11" value="100"> 100 puntos</label>
-<label><input type="radio" name="p11" value="55"> 55 puntos</label>
-<label><input type="radio" name="p11" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>11. Pisos pesebreras</p>
+<label><input type="radio" name="p11" value="100">100</label>
+<label><input type="radio" name="p11" value="55">55</label>
+<label><input type="radio" name="p11" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Pisos corrales?</p>
-<label><input type="radio" name="p12" value="100"> 100 puntos</label>
-<label><input type="radio" name="p12" value="55"> 55 puntos</label>
-<label><input type="radio" name="p12" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>12. Pisos corrales</p>
+<label><input type="radio" name="p12" value="100">100</label>
+<label><input type="radio" name="p12" value="55">55</label>
+<label><input type="radio" name="p12" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Dimensiones pesebreras?</p>
-<label><input type="radio" name="p13" value="100"> 100 puntos</label>
-<label><input type="radio" name="p13" value="55"> 55 puntos</label>
-<label><input type="radio" name="p13" value="20"> 20 puntos</label>
-<label><input type="radio" name="p13" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>13. Dimensiones pesebreras</p>
+<label><input type="radio" name="p13" value="100">100</label>
+<label><input type="radio" name="p13" value="55">55</label>
+<label><input type="radio" name="p13" value="20">20</label>
+<label><input type="radio" name="p13" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Limpieza corrales?</p>
-<label><input type="radio" name="p14" value="100"> 100 puntos</label>
-<label><input type="radio" name="p14" value="55"> 55 puntos</label>
-<label><input type="radio" name="p14" value="20"> 20 puntos</label>
-<label><input type="radio" name="p14" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>14. Limpieza corrales</p>
+<label><input type="radio" name="p14" value="100">100</label>
+<label><input type="radio" name="p14" value="55">55</label>
+<label><input type="radio" name="p14" value="20">20</label>
+<label><input type="radio" name="p14" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Bebederos potreros?</p>
-<label><input type="radio" name="p15" value="100"> 100 puntos</label>
-<label><input type="radio" name="p15" value="55"> 55 puntos</label>
-<label><input type="radio" name="p15" value="20"> 20 puntos</label>
-<label><input type="radio" name="p15" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>15. Bebederos en potreros</p>
+<label><input type="radio" name="p15" value="100">100</label>
+<label><input type="radio" name="p15" value="55">55</label>
+<label><input type="radio" name="p15" value="20">20</label>
+<label><input type="radio" name="p15" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Potreros limpios?</p>
-<label><input type="radio" name="p16" value="100"> 100 puntos</label>
-<label><input type="radio" name="p16" value="55"> 55 puntos</label>
-<label><input type="radio" name="p16" value="20"> 20 puntos</label>
-<label><input type="radio" name="p16" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>16. Limpieza de potreros</p>
+<label><input type="radio" name="p16" value="100">100</label>
+<label><input type="radio" name="p16" value="55">55</label>
+<label><input type="radio" name="p16" value="20">20</label>
+<label><input type="radio" name="p16" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Encharcamiento?</p>
-<label><input type="radio" name="p17" value="100"> 100 puntos</label>
-<label><input type="radio" name="p17" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>17. Encharcamiento</p>
+<label><input type="radio" name="p17" value="100">100</label>
+<label><input type="radio" name="p17" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Sombra?</p>
-<label><input type="radio" name="p18" value="100"> 100 puntos</label>
-<label><input type="radio" name="p18" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>18. Acceso a sombra</p>
+<label><input type="radio" name="p18" value="100">100</label>
+<label><input type="radio" name="p18" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Plan contingencia?</p>
-<label><input type="radio" name="p19" value="100"> 100 puntos</label>
-<label><input type="radio" name="p19" value="0"> 0 puntos</label></div>
+<div class="pregunta">
+<p>19. Plan de contingencia</p>
+<label><input type="radio" name="p19" value="100">100</label>
+<label><input type="radio" name="p19" value="0">0</label>
+</div>
 
-<h2>Sección 3</h2>
+<!-- ===================== SECCIÓN 3 ===================== -->
+<h2>SECCIÓN 3: Salud</h2>
 
-<!-- 20-35 -->
-<div class="pregunta"><p>¿Heridas?</p>
-<label><input type="radio" name="p20" value="100"> 100</label>
-<label><input type="radio" name="p20" value="55"> 55</label>
-<label><input type="radio" name="p20" value="20"> 20</label>
-<label><input type="radio" name="p20" value="0"> 0</label></div>
+<div class="pregunta">
+<p>20. Heridas</p>
+<label><input type="radio" name="p20" value="100">100</label>
+<label><input type="radio" name="p20" value="55">55</label>
+<label><input type="radio" name="p20" value="20">20</label>
+<label><input type="radio" name="p20" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Cojeras?</p>
-<label><input type="radio" name="p21" value="100"> 100</label>
-<label><input type="radio" name="p21" value="55"> 55</label>
-<label><input type="radio" name="p21" value="20"> 20</label>
-<label><input type="radio" name="p21" value="0"> 0</label></div>
+<div class="pregunta">
+<p>21. Cojeras</p>
+<label><input type="radio" name="p21" value="100">100</label>
+<label><input type="radio" name="p21" value="55">55</label>
+<label><input type="radio" name="p21" value="20">20</label>
+<label><input type="radio" name="p21" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Tos?</p>
-<label><input type="radio" name="p22" value="100"> 100</label>
-<label><input type="radio" name="p22" value="0"> 0</label></div>
+<div class="pregunta">
+<p>22. Tos</p>
+<label><input type="radio" name="p22" value="100">100</label>
+<label><input type="radio" name="p22" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Diarrea?</p>
-<label><input type="radio" name="p23" value="100"> 100</label>
-<label><input type="radio" name="p23" value="0"> 0</label></div>
+<div class="pregunta">
+<p>23. Diarrea</p>
+<label><input type="radio" name="p23" value="100">100</label>
+<label><input type="radio" name="p23" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Secreciones nasales?</p>
-<label><input type="radio" name="p24" value="100"> 100</label>
-<label><input type="radio" name="p24" value="0"> 0</label></div>
+<div class="pregunta">
+<p>24. Secreciones nasales</p>
+<label><input type="radio" name="p24" value="100">100</label>
+<label><input type="radio" name="p24" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Secreciones oculares?</p>
-<label><input type="radio" name="p25" value="100"> 100</label>
-<label><input type="radio" name="p25" value="0"> 0</label></div>
+<div class="pregunta">
+<p>25. Secreciones oculares</p>
+<label><input type="radio" name="p25" value="100">100</label>
+<label><input type="radio" name="p25" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Problemas piel?</p>
-<label><input type="radio" name="p26" value="100"> 100</label>
-<label><input type="radio" name="p26" value="55"> 55</label>
-<label><input type="radio" name="p26" value="20"> 20</label>
-<label><input type="radio" name="p26" value="0"> 0</label></div>
+<div class="pregunta">
+<p>26. Problemas dermatológicos</p>
+<label><input type="radio" name="p26" value="100">100</label>
+<label><input type="radio" name="p26" value="55">55</label>
+<label><input type="radio" name="p26" value="20">20</label>
+<label><input type="radio" name="p26" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Vibrisas?</p>
-<label><input type="radio" name="p27" value="100"> 100</label>
-<label><input type="radio" name="p27" value="0"> 0</label></div>
+<div class="pregunta">
+<p>27. Vibrisas</p>
+<label><input type="radio" name="p27" value="100">100</label>
+<label><input type="radio" name="p27" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Garrapatas?</p>
-<label><input type="radio" name="p28" value="100"> 100</label>
-<label><input type="radio" name="p28" value="55"> 55</label>
-<label><input type="radio" name="p28" value="20"> 20</label>
-<label><input type="radio" name="p28" value="0"> 0</label></div>
+<div class="pregunta">
+<p>28. Garrapatas</p>
+<label><input type="radio" name="p28" value="100">100</label>
+<label><input type="radio" name="p28" value="55">55</label>
+<label><input type="radio" name="p28" value="20">20</label>
+<label><input type="radio" name="p28" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Moscas?</p>
-<label><input type="radio" name="p29" value="100"> 100</label>
-<label><input type="radio" name="p29" value="55"> 55</label>
-<label><input type="radio" name="p29" value="20"> 20</label>
-<label><input type="radio" name="p29" value="0"> 0</label></div>
+<div class="pregunta">
+<p>29. Moscas</p>
+<label><input type="radio" name="p29" value="100">100</label>
+<label><input type="radio" name="p29" value="55">55</label>
+<label><input type="radio" name="p29" value="20">20</label>
+<label><input type="radio" name="p29" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Medicamentos?</p>
-<label><input type="radio" name="p30" value="100"> 100</label>
-<label><input type="radio" name="p30" value="0"> 0</label></div>
+<div class="pregunta">
+<p>30. Medicamentos</p>
+<label><input type="radio" name="p30" value="100">100</label>
+<label><input type="radio" name="p30" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Plan sanitario?</p>
-<label><input type="radio" name="p31" value="100"> 100</label>
-<label><input type="radio" name="p31" value="0"> 0</label></div>
+<div class="pregunta">
+<p>31. Plan sanitario</p>
+<label><input type="radio" name="p31" value="100">100</label>
+<label><input type="radio" name="p31" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Sacrificio?</p>
-<label><input type="radio" name="p32" value="100"> 100</label>
-<label><input type="radio" name="p32" value="0"> 0</label></div>
+<div class="pregunta">
+<p>32. Sacrificio humanitario</p>
+<label><input type="radio" name="p32" value="100">100</label>
+<label><input type="radio" name="p32" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Castración?</p>
-<label><input type="radio" name="p33" value="100"> 100</label>
-<label><input type="radio" name="p33" value="0"> 0</label></div>
+<div class="pregunta">
+<p>33. Castración</p>
+<label><input type="radio" name="p33" value="100">100</label>
+<label><input type="radio" name="p33" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Identificación?</p>
-<label><input type="radio" name="p34" value="100"> 100</label>
-<label><input type="radio" name="p34" value="0"> 0</label></div>
+<div class="pregunta">
+<p>34. Identificación</p>
+<label><input type="radio" name="p34" value="100">100</label>
+<label><input type="radio" name="p34" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Prácticas dolor?</p>
-<label><input type="radio" name="p35" value="100"> 100</label>
-<label><input type="radio" name="p35" value="0"> 0</label></div>
+<div class="pregunta">
+<p>35. Prácticas dolorosas</p>
+<label><input type="radio" name="p35" value="100">100</label>
+<label><input type="radio" name="p35" value="0">0</label>
+</div>
 
-<h2>Sección 4</h2>
+<!-- ===================== SECCIÓN 4 ===================== -->
+<h2>SECCIÓN 4: Temor y angustia</h2>
 
-<div class="pregunta"><p>¿Capacitación?</p>
-<label><input type="radio" name="p36" value="100"> 100</label>
-<label><input type="radio" name="p36" value="0"> 0</label></div>
+<div class="pregunta">
+<p>36. Capacitación del personal</p>
+<label><input type="radio" name="p36" value="100">100</label>
+<label><input type="radio" name="p36" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Relación humano-animal?</p>
-<label><input type="radio" name="p37" value="100"> 100</label>
-<label><input type="radio" name="p37" value="55"> 55</label>
-<label><input type="radio" name="p37" value="20"> 20</label>
-<label><input type="radio" name="p37" value="0"> 0</label></div>
+<div class="pregunta">
+<p>37. Relación humano-animal</p>
+<label><input type="radio" name="p37" value="100">100</label>
+<label><input type="radio" name="p37" value="55">55</label>
+<label><input type="radio" name="p37" value="20">20</label>
+<label><input type="radio" name="p37" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Registros?</p>
-<label><input type="radio" name="p38" value="100"> 100</label>
-<label><input type="radio" name="p38" value="0"> 0</label></div>
+<div class="pregunta">
+<p>38. Registros de manejo</p>
+<label><input type="radio" name="p38" value="100">100</label>
+<label><input type="radio" name="p38" value="0">0</label>
+</div>
 
-<h2>Sección 5</h2>
+<!-- ===================== SECCIÓN 5 ===================== -->
+<h2>SECCIÓN 5: Comportamiento natural</h2>
 
-<div class="pregunta"><p>¿Comportamiento?</p>
-<label><input type="radio" name="p39" value="100"> 100</label>
-<label><input type="radio" name="p39" value="55"> 55</label>
-<label><input type="radio" name="p39" value="20"> 20</label>
-<label><input type="radio" name="p39" value="0"> 0</label></div>
+<div class="pregunta">
+<p>39. Comportamiento</p>
+<label><input type="radio" name="p39" value="100">100</label>
+<label><input type="radio" name="p39" value="55">55</label>
+<label><input type="radio" name="p39" value="20">20</label>
+<label><input type="radio" name="p39" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Agrupamiento?</p>
-<label><input type="radio" name="p40" value="100"> 100</label>
-<label><input type="radio" name="p40" value="0"> 0</label></div>
+<div class="pregunta">
+<p>40. Agrupamiento social</p>
+<label><input type="radio" name="p40" value="100">100</label>
+<label><input type="radio" name="p40" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Estereotipias?</p>
-<label><input type="radio" name="p41" value="100"> 100</label>
-<label><input type="radio" name="p41" value="0"> 0</label></div>
+<div class="pregunta">
+<p>41. Estereotipias</p>
+<label><input type="radio" name="p41" value="100">100</label>
+<label><input type="radio" name="p41" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Acceso potreros?</p>
-<label><input type="radio" name="p42" value="100"> 100</label>
-<label><input type="radio" name="p42" value="0"> 0</label></div>
+<div class="pregunta">
+<p>42. Acceso a potreros</p>
+<label><input type="radio" name="p42" value="100">100</label>
+<label><input type="radio" name="p42" value="0">0</label>
+</div>
 
-<div class="pregunta"><p>¿Entrenamiento?</p>
-<label><input type="radio" name="p43" value="100"> 100</label>
-<label><input type="radio" name="p43" value="55"> 55</label>
-<label><input type="radio" name="p43" value="20"> 20</label>
-<label><input type="radio" name="p43" value="0"> 0</label></div>
+<div class="pregunta">
+<p>43. Entrenamiento</p>
+<label><input type="radio" name="p43" value="100">100</label>
+<label><input type="radio" name="p43" value="55">55</label>
+<label><input type="radio" name="p43" value="20">20</label>
+<label><input type="radio" name="p43" value="0">0</label>
+</div>
 
 </form>
 
 <button onclick="calcular()">Calcular resultado</button>
-<h2 id="resultado"></h2>
+
+<div id="resultado"></div>
 
 <script>
 function calcular(){
+
 let total = 0;
-let radios = document.querySelectorAll('input[type="radio"]:checked');
-radios.forEach(r => total += parseInt(r.value));
-document.getElementById('resultado').innerText = "Puntaje total: " + total;
+
+// TOTAL DE PREGUNTAS
+let totalPreguntas = 43;
+
+// RESPUESTAS SELECCIONADAS
+let respondidas = document.querySelectorAll('input[type=radio]:checked').length;
+
+// 🚫 VALIDACIÓN: si faltan respuestas
+if(respondidas < totalPreguntas){
+    alert("⚠ Debes responder todas las 43 preguntas antes de calcular.");
+    return;
+}
+
+// SI ESTÁ COMPLETO → CALCULA
+document.querySelectorAll('input[type=radio]:checked')
+.forEach(r => total += parseInt(r.value));
+
+document.getElementById("resultado").innerHTML =
+"🧾 Puntaje total: " + total;
+
 }
 </script>
 
